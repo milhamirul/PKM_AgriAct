@@ -7,7 +7,7 @@
 			<div class="col-6 col-md-3 c-toolbar__state">
 				<h4 class="c-toolbar__state-number"><?php echo $count_courses; ?></h4>
 				<span class="c-toolbar__state-title">Courses</span>
-			</div>		
+			</div>
 			<div class="col-6 col-md-3 c-toolbar__state">
 				<h4 class="c-toolbar__state-number"><?php echo $count_post; ?></h4>
 				<span class="c-toolbar__state-title">Blog Post</span>
@@ -19,7 +19,7 @@
 			<div class="col-6 col-md-3 c-toolbar__state">
 				<h4 class="c-toolbar__state-number"><?php echo $count_user; ?></h4>
 				<span class="c-toolbar__state-title">User</span>
-			</div>				
+			</div>
 		</div><!-- // .row -->
 	</div><!-- // -->
 </div>
@@ -49,7 +49,7 @@
 			<div class="c-map__visual" id="vmap" style="height: 250px;"></div>
 
 			<div class="row">
-				<?php foreach ($page_view_country_table as $data): ?>
+				<?php foreach ($page_view_country_table as $data) : ?>
 					<div class="col-6">
 						<ul class="c-map__labels c-map__labels--left">
 							<li class="c-map__label">
@@ -62,7 +62,7 @@
 					</div>
 				<?php endforeach ?>
 
-			</div><!-- // .row -->    
+			</div><!-- // .row -->
 		</div><!-- // .c-map -->
 
 	</div>
@@ -87,7 +87,7 @@
 			<span class="u-float-right u-text-mute">
 				<?php echo $total_visitor ?>
 			</span>
-		</p>				
+		</p>
 
 	</div>
 
@@ -127,7 +127,7 @@
 			<span class="u-float-right u-text-mute">
 				<?php echo $page_view_all_time; ?>
 			</span>
-		</p>			
+		</p>
 
 	</div>
 
@@ -135,19 +135,19 @@
 
 		<h3 class="u-mb-small">Pageviews by Browsers</h3>
 
-		<?php if ($page_view_by_browser_data): foreach ($page_view_by_browser_data as $data): ?>			
-			<p class="u-mb-xsmall">
-				<i class="fa fa-circle-o u-color-info u-mr-xsmall"></i> <?php echo $data['browser'] ?>
+		<?php if ($page_view_by_browser_data) : foreach ($page_view_by_browser_data as $data) : ?>
+				<p class="u-mb-xsmall">
+					<i class="fa fa-circle-o u-color-info u-mr-xsmall"></i> <?php echo $data['browser'] ?>
 
-				<span class="u-float-right u-text-mute">
-					<?php echo $data['jumlah']; ?> 
-					<span class="u-color-info">
-						(<?php echo $data['percentage'] ?>)
+					<span class="u-float-right u-text-mute">
+						<?php echo $data['jumlah']; ?>
+						<span class="u-color-info">
+							(<?php echo $data['percentage'] ?>)
+						</span>
 					</span>
-				</span>
-			</p>
-		<?php endforeach ?>
-		<?php else: ?>
+				</p>
+			<?php endforeach ?>
+		<?php else : ?>
 			<P>No Data.</P>
 		<?php endif ?>
 
@@ -158,23 +158,23 @@
 		<h3 class="u-mb-small u-text-medium">Pageviews by OS</h3>
 
 
-		<?php if ($page_view_by_os_data): foreach ($page_view_by_os_data as $data): ?>			
-			<p class="u-mb-xsmall">
-				<i class="fa fa-circle-o u-color-info u-mr-xsmall"></i> <?php echo $data['os'] ?>
+		<?php if ($page_view_by_os_data) : foreach ($page_view_by_os_data as $data) : ?>
+				<p class="u-mb-xsmall">
+					<i class="fa fa-circle-o u-color-info u-mr-xsmall"></i> <?php echo $data['os'] ?>
 
-				<span class="u-float-right u-text-mute">
-					<?php echo $data['jumlah'] ?>
-					<span class="u-color-info">
-						(<?php echo $data['percentage'] ?>)
+					<span class="u-float-right u-text-mute">
+						<?php echo $data['jumlah'] ?>
+						<span class="u-color-info">
+							(<?php echo $data['percentage'] ?>)
+						</span>
 					</span>
-				</span>
-			</p>
-		<?php endforeach ?>
-		<?php else: ?>
+				</p>
+			<?php endforeach ?>
+		<?php else : ?>
 			<P>No Data.</P>
 		<?php endif ?>
 
-	</div>	
+	</div>
 </div>
 
 <?php $this->load->view('app/_layouts/footer'); ?>
